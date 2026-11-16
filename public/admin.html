@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopStack · Admin Activity</title><link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/">◈ ShopStack</a><nav><a href="/">Storefront</a><a class="active" href="/admin.html">User analytics</a><a href="/css-generator.html">CSS generator</a></nav></header>
+  <main class="wrap">
+    <div class="heading"><div><p class="eyebrow">STORE MANAGEMENT</p><h1>Traffic <span>overview</span></h1><p class="muted">Review incoming request logs and see the country associated with each demo visitor IP.</p></div><button id="refreshBtn" class="secondary">↻ Refresh</button></div>
+    <div class="notice"><strong>Demo mode:</strong> Simulated visitors use reserved documentation IP addresses and sample country labels. This does not change or spoof your computer's public IP. Live requests are logged; country is shown as Unknown unless a geolocation service is configured.</div>
+    <section class="stats"><article><span>Total requests</span><strong id="total">0</strong></article><article><span>Unique IP addresses</span><strong id="ips">0</strong></article><article><span>Countries seen</span><strong id="countriesCount">0</strong></article></section>
+    <section class="panel"><div class="panel-head"><div><h2>Simulate web requests</h2><p class="muted">Choose a sample IP to add a visit to the dashboard.</p></div></div><div class="simulator"><select id="demoIp"><option value="203.0.113.10">203.0.113.10 — India</option><option value="198.51.100.20">198.51.100.20 — United States</option><option value="192.0.2.30">192.0.2.30 — United Kingdom</option><option value="203.0.113.40">203.0.113.40 — Germany</option><option value="198.51.100.50">198.51.100.50 — Japan</option></select><button id="simulateBtn">＋ Simulate request</button><span id="message" role="status"></span></div></section>
+    <section class="panel"><div class="panel-head"><div><h2>Requests by country</h2><p class="muted">Counts based on the current request log.</p></div></div><div id="countryList" class="country-list"><p class="muted">No requests yet.</p></div></section>
+    <section class="panel"><div class="panel-head"><div><h2>Recent request logs</h2><p class="muted">Latest 100 recorded requests.</p></div><button id="clearBtn" class="danger-outline">Clear logs</button></div><div class="table-wrap"><table><thead><tr><th>Time</th><th>IP address</th><th>Country</th><th>Method</th><th>Path</th><th>Status</th><th>Source</th></tr></thead><tbody id="logsBody"><tr><td colspan="7">Loading…</td></tr></tbody></table></div></section>
+  </main><script src="js/admin.js"></script>
+</body></html>

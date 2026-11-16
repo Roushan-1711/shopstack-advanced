@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopStack · CSS Generator</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/generator.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/">◈ ShopStack</a><nav><a href="/">Storefront</a><a href="/admin.html">User analytics</a><a class="active" href="/css-generator.html">CSS generator</a></nav></header>
+  <main class="wrap">
+    <div class="heading"><div><p class="eyebrow">DESIGN TOOLS</p><h1>CSS <span>generator</span></h1><p class="muted">Customize the appearance, preview your choices and download a reusable CSS file.</p></div><button id="downloadBtn">↓ Download CSS</button></div>
+    <div class="generator-grid">
+      <section class="panel controls">
+        <h2>Customize appearance</h2>
+        <label>Primary colour<input type="color" id="primary" value="#315d43"></label>
+        <label>Page background<input type="color" id="background" value="#f7f8f4"></label>
+        <label>Card background<input type="color" id="card" value="#ffffff"></label>
+        <label>Text colour<input type="color" id="text" value="#20251f"></label>
+        <label>Font family<select id="font"><option value="Arial, sans-serif">Arial</option><option value="Georgia, serif">Georgia</option><option value="'Trebuchet MS', sans-serif">Trebuchet MS</option><option value="Verdana, sans-serif">Verdana</option></select></label>
+        <label>Base font size <output id="fontSizeValue">16px</output><input type="range" id="fontSize" min="12" max="22" value="16"></label>
+        <label>Corner radius <output id="radiusValue">10px</output><input type="range" id="radius" min="0" max="24" value="10"></label>
+        <button class="secondary full" id="resetBtn">Reset to defaults</button>
+      </section>
+      <section class="panel preview-panel">
+        <div class="preview-heading"><div><h2>Live preview</h2><p class="muted">Changes appear here immediately.</p></div><span class="preview-tag">PREVIEW</span></div>
+        <div id="preview" class="preview">
+          <div class="preview-nav"><strong>◈ ShopStack</strong><span>Home　 Products　 About</span></div>
+          <div class="preview-content"><span class="preview-label">FEATURED PRODUCT</span><h2>Wireless Headphones</h2><p>Comfortable sound for everyday listening. Customize the colours and typography to match your preferred website style.</p><div class="preview-price">₹2,499</div><button type="button" class="preview-button">View product</button></div>
+          <div class="preview-card"><strong>Product card</strong><p>This card demonstrates your selected background, text colour and rounded corners.</p></div>
+        </div>
+        <h3>Generated CSS</h3><pre id="cssOutput" class="css-output" aria-live="polite"></pre>
+      </section>
+    </div>
+  </main>
+  <script src="js/css-generator.js"></script>
+</body>
+</html>
